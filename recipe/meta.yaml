@@ -1,6 +1,6 @@
 {% set name = "pandas_ml" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "a56ac33cae34b2db4a21da64cdb816ed30cb9e1d4fc97a1521bef1449532bd4d" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "43e54b1a6d17ef76c7c7bc64ac2a2a9ef4060e57b920e81a81895897e2cd9125" %}
 
 package:
   name: {{ name|lower }}
@@ -12,17 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools
-    - pandas >=0.17.0
+    - pandas >=0.19.0
   run:
     - python
-    - pandas >=0.17.0
+    - pandas >=0.19.0
     - enum34  # [py2k]
 
 test:
@@ -45,7 +45,7 @@ test:
     - pandas_ml.util
     - pandas_ml.xgboost
     - pandas_ml.xgboost.test
-    
+
 about:
   home: https://github.com/pandas-ml/pandas-ml
   license: BSD 3-clause
@@ -55,7 +55,7 @@ about:
 
   description: |
     pandas_ml is a package which integrates pandas, scikit-learn,
-    xgboost into one package for easy handling of data and creation 
+    xgboost into one package for easy handling of data and creation
     of machine learning models.
   doc_url: http://pandas-ml.readthedocs.org/en/stable
   dev_url: https://github.com/pandas-ml/pandas-ml
