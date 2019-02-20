@@ -1,6 +1,6 @@
 {% set name = "pandas_ml" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "a56ac33cae34b2db4a21da64cdb816ed30cb9e1d4fc97a1521bef1449532bd4d" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "43e54b1a6d17ef76c7c7bc64ac2a2a9ef4060e57b920e81a81895897e2cd9125" %}
 
 package:
   name: {{ name|lower }}
