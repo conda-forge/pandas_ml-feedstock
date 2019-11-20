@@ -1,13 +1,9 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About pandas_ml
 ===============
 
 Home: https://github.com/pandas-ml/pandas-ml
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -21,9 +17,15 @@ of machine learning models.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pandas_ml-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pandas_ml-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/pandas_ml-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pandas_ml-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pandas-ml-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pandas-ml-feedstock/branch/master)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=750&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pandas_ml-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
