@@ -1,54 +1,45 @@
-{% set name = "pandas_ml" %}
 {% set version = "0.6.1" %}
-{% set sha256 = "f5d4f7c6eeada8e98856daace511cdc84995b593a3ae2741dcc4e665ec2918d3" %}
 
 package:
-  name: {{ name|lower }}
+  name: pandas_ml
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/p/pandas_ml/pandas_ml-{{ version }}.tar.gz
+  sha256: f5d4f7c6eeada8e98856daace511cdc84995b593a3ae2741dcc4e665ec2918d3
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
-    - setuptools
-    - pandas >=0.17.0
+    - pip
   run:
     - python
-    - pandas >=0.17.0
+    - pandas >=0.17.0,<=0.24.2
     - enum34  # [py2k]
 
 test:
   imports:
     - pandas_ml
     - pandas_ml.confusion_matrix
-    - pandas_ml.confusion_matrix.test
     - pandas_ml.core
     - pandas_ml.imbaccessors
-    - pandas_ml.imbaccessors.test
     - pandas_ml.misc
     - pandas_ml.misc.test
     - pandas_ml.skaccessors
-    - pandas_ml.skaccessors.test
     - pandas_ml.smaccessors
-    - pandas_ml.smaccessors.test
     - pandas_ml.snsaccessors
-    - pandas_ml.snsaccessors.test
     - pandas_ml.test
     - pandas_ml.util
     - pandas_ml.xgboost
-    - pandas_ml.xgboost.test
     
 about:
   home: https://github.com/pandas-ml/pandas-ml
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'pandas, scikit-learn and xgboost integration'
