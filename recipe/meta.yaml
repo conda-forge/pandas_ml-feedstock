@@ -15,12 +15,11 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - pandas >=0.17.0,<=0.24.2
-    - enum34  # [py2k]
 
 test:
   imports:
